@@ -3,109 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IBN-AMEEN Paradise Travels & Tours</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to right, #ff7e5f, #feb47b);
-            color: #fff;
-            text-align: center;
-        }
-        header {
-            background: #222;
-            padding: 20px;
-        }
-        header h1 {
-            margin: 0;
-            color: #ffcc00;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #ffcc00;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        section {
-            padding: 50px 20px;
-        }
-        #home {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 40px;
-            border-radius: 10px;
-        }
-        #services ul {
-            list-style: none;
-            padding: 0;
-        }
-        #services ul li {
-            background: rgba(0, 0, 0, 0.6);
-            padding: 10px;
-            margin: 10px auto;
-            width: 60%;
-            border-radius: 5px;
-        }
-        footer {
-            background: #222;
-            padding: 10px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            color: #ffcc00;
-        }
-    </style>
+    <title>Ayo Prudent Nigeria Limited</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Welcome to IBN-AMEEN Paradise Travels & Tours</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Ayo Prudent Nigeria Limited</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    
-    <section id="home">
-        <h2>Your Gateway to Amazing Travel Experiences</h2>
-        <p>Book flights, process visas, and explore exciting destinations with us.</p>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Your Partner in Diverse Industries</h2>
+            <p>Empowering growth across Oil & Gas, Retail, Hospitality, and Logistics.</p>
+            <a href="#services" class="btn">Explore Our Services</a>
+        </div>
     </section>
-    
-    <section id="about">
-        <h2>About Us</h2>
-        <p>IBN-AMEEN Paradise Travels & Tours has been serving travelers since 2007, offering exceptional travel services.</p>
+
+    <section id="about" class="about-us">
+        <div class="container">
+            <h2>About Ayo Prudent Nigeria Limited</h2>
+            <p>Ayo Prudent Nigeria Limited is a multifaceted enterprise dedicated to delivering excellence and innovation across various critical sectors of the Nigerian economy. With a commitment to quality and customer satisfaction, we aim to be a trusted partner in your success.</p>
+            <p>Our diverse portfolio allows us to leverage expertise and resources, creating synergistic opportunities that benefit all our stakeholders. We are driven by a vision to contribute significantly to the economic development of the nation through sustainable and impactful business practices.</p>
+        </div>
     </section>
-    
-    <section id="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li>✈️ Flight Bookings</li>
-            <li>🛂 Visa Processing</li>
-            <li>🏝️ Tour Packages</li>
-            <li>🏨 Hotel Reservations</li>
-        </ul>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Diverse Business Ventures</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3>Oil & Gas</h3>
+                    <p>Providing essential services and solutions to the energy sector, ensuring efficiency and reliability.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Supermarket</h3>
+                    <p>Offering a wide range of quality products and a convenient shopping experience for everyday needs.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Eatery</h3>
+                    <p>Delivering delightful culinary experiences with a focus on fresh ingredients and excellent service.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Lubricant Sales</h3>
+                    <p>Supplying high-performance lubricants for industrial and automotive applications, ensuring optimal machinery function.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Gift Items</h3>
+                    <p>Curating unique and thoughtful gift items for all occasions, helping you celebrate special moments.</p>
+                </div>
+            </div>
+        </div>
     </section>
-    
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>📍 NO 223, IKORODU ROAD, ILUPEJU, LAGOS</p>
-        <p>📞 Phone: +2348035872156</p>
-        <p>📧 Email: bolameen247@gmail.com</p>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p>We'd love to hear from you. Please fill out the form below or use our contact details to reach us.</p>
+            <div class="contact-content">
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="6"></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+                <div class="contact-details">
+                    <h3>Contact Information</h3>
+                    <p><strong>Email:</strong> info@ayoprudent.com (Placeholder)</p>
+                    <p><strong>Phone:</strong> +234 800 123 4567 (Placeholder)</p>
+                    <p><strong>Address:</strong> 123 Prudent Road, Business District, Nigeria (Placeholder)</p>
+                    <p>Feel free to replace these with your uncle's actual contact details.</p>
+                </div>
+            </div>
+        </div>
     </section>
-    
+
     <footer>
-        <p>&copy; 2025 IBN-AMEEN Paradise Travels & Tours. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 Ayo Prudent Nigeria Limited. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
