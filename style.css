@@ -9,7 +9,8 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 85%; /* Slightly wider container for better use of space */
+    max-width: 1200px; /* Max width to prevent content from stretching too wide on large screens */
     margin: auto;
     overflow: hidden;
     padding: 20px 0;
@@ -20,10 +21,11 @@ header {
     background: #2c3e50; /* Dark Blue */
     color: #fff;
     padding: 1rem 0;
-    border-bottom: 3px solid #27ae60; /* Green Accent */
+    border-bottom: 4px solid #27ae60; /* Green Accent, slightly thicker */
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow for depth */
 }
 
 header h1 {
@@ -31,10 +33,12 @@ header h1 {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    font-size: 1.8em;
 }
 
 header nav {
     float: right;
+    margin-top: 5px; /* Align with h1 better */
 }
 
 header ul {
@@ -45,7 +49,7 @@ header ul {
 
 header li {
     display: inline;
-    padding: 0 15px;
+    padding: 0 18px; /* Slightly more spacing */
 }
 
 header a {
@@ -54,172 +58,298 @@ header a {
     text-transform: uppercase;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 header a:hover {
     color: #ecf0f1; /* Light Gray */
+    border-bottom: 2px solid #2ecc71; /* Subtle hover effect */
 }
 
 /* Hero Section */
 .hero {
     background: #34495e; /* Slightly lighter dark blue */
     color: #fff;
-    min-height: 500px;
+    min-height: 550px; /* Taller hero section */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     background-size: cover;
     background-position: center;
-    /* You can add a background image here if desired */
-    /* background-image: url('your-image.jpg'); */
+    /* Optional: Add a high-quality background image here */
+    /* background-image: linear-gradient(rgba(52, 73, 94, 0.7), rgba(52, 73, 94, 0.7)), url('your-hero-image.jpg'); */
 }
 
 .hero h2 {
-    font-size: 3em;
+    font-size: 3.5em; /* Larger heading */
     margin-bottom: 15px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    line-height: 1.2;
 }
 
 .hero p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    max-width: 700px;
+    font-size: 1.3em; /* Larger paragraph */
+    margin-bottom: 40px; /* More space before button */
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 
+/* Buttons */
 .btn {
     display: inline-block;
-    background: #27ae60; /* Green */
-    color: #fff;
-    padding: 12px 25px;
+    padding: 14px 30px; /* Larger padding */
     text-decoration: none;
     border-radius: 5px;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease;
     font-weight: 600;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none; /* Remove default button border */
+    cursor: pointer;
 }
 
-.btn:hover {
+.btn-primary {
+    background: #27ae60; /* Green */
+    color: #fff;
+}
+
+.btn-primary:hover {
     background: #2ecc71; /* Lighter Green */
+    transform: translateY(-2px); /* Slight lift effect */
 }
 
 /* Section Styling */
 section {
-    padding: 60px 0;
+    padding: 80px 0; /* More vertical padding for sections */
     text-align: center;
 }
 
+section:nth-of-type(even) { /* Apply to alternate sections for visual separation */
+    background-color: #ecf0f1; /* Light Gray */
+}
+
 section h2 {
-    font-size: 2.5em;
+    font-size: 2.8em; /* Larger section headings */
     margin-bottom: 40px;
     color: #2c3e50;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
 }
+
+section h2::after { /* Underline effect for headings */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #27ae60;
+    border-radius: 2px;
+}
+
 
 .about-us {
     background: #fff;
 }
 
 .about-us p {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto 20px auto;
-    font-size: 1.1em;
+    font-size: 1.15em; /* Slightly larger text */
     color: #555;
 }
 
-.services {
-    background: #ecf0f1; /* Light Gray */
+.about-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .service-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    gap: 35px; /* More space between items */
     margin-top: 40px;
 }
 
 .service-item {
     background: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 35px; /* More padding */
+    border-radius: 10px; /* Slightly more rounded corners */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Stronger shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* For potential icon/image alignment */
+    flex-direction: column;
+    align-items: center;
 }
 
 .service-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px); /* More pronounced lift */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
 }
 
 .service-item h3 {
     color: #2c3e50;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+    font-size: 1.6em; /* Larger service titles */
     margin-bottom: 15px;
 }
 
 .service-item p {
     color: #666;
+    font-size: 1em;
+    line-height: 1.7; /* Better readability */
+}
+
+.service-icon { /* Style for potential images/icons within service items */
+    width: 80px; /* Example size for icons */
+    height: 80px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    border-radius: 50%; /* If icons are round */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Testimonials Section */
+.testimonials {
+    background: #fff;
+    padding-bottom: 60px; /* Slightly less padding at bottom than other sections */
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    text-align: left;
+}
+
+.testimonial-item {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #27ae60; /* Green accent on the left */
+}
+
+.testimonial-item blockquote {
+    font-style: italic;
+    margin: 0 0 15px 0;
+    color: #444;
+    font-size: 1.1em;
+    line-height: 1.7;
+}
+
+.testimonial-item .client-name {
+    font-weight: 600;
+    color: #2c3e50;
     font-size: 0.95em;
+    text-align: right;
+}
+
+.testimonial-cta {
+    margin-top: 50px;
+    font-size: 1.2em;
+    color: #555;
 }
 
 /* Contact Section */
 .contact {
-    background: #fff;
+    background: #ecf0f1;
 }
 
 .contact-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
+    gap: 50px; /* More space between form and details */
     margin-top: 40px;
 }
 
 .contact-form, .contact-details {
     flex: 1;
-    min-width: 300px;
-    max-width: 500px;
+    min-width: 320px; /* Slightly larger minimum width */
+    max-width: 550px;
     text-align: left;
+    background: #fff; /* White background for form/details */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
+    width: calc(100% - 24px); /* Account for padding */
     padding: 12px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
+    box-sizing: border-box; /* Include padding in width */
 }
 
 .contact-form textarea {
     resize: vertical;
 }
 
-.contact-form .btn {
+.contact-form .btn-primary { /* Specific style for contact form button */
     width: 100%;
-    border: none;
-    cursor: pointer;
     font-size: 1.1em;
+    padding: 15px;
 }
 
 .contact-details h3 {
     color: #2c3e50;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+    font-size: 1.8em;
 }
 
 .contact-details p {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: #555;
     font-size: 1.05em;
+}
+
+.social-links {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.social-links p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: 600;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+}
+
+.social-links img {
+    width: 35px; /* Larger icons */
+    height: 35px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 
@@ -228,11 +358,38 @@ footer {
     background: #2c3e50;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
-    font-size: 0.9em;
+    padding: 25px 0;
+    font-size: 0.95em;
+    margin-top: 0; /* No margin-top needed if sections have padding */
 }
 
 /* Responsive Design */
+@media (max-width: 992px) {
+    .container {
+        width: 90%;
+    }
+    header h1 {
+        font-size: 1.6em;
+    }
+    header nav {
+        float: none;
+        text-align: center;
+        margin-top: 15px;
+    }
+    header li {
+        padding: 0 10px;
+    }
+    .hero h2 {
+        font-size: 2.8em;
+    }
+    .hero p {
+        font-size: 1.1em;
+    }
+    section h2 {
+        font-size: 2.2em;
+    }
+}
+
 @media (max-width: 768px) {
     header h1,
     header nav {
@@ -257,7 +414,8 @@ footer {
         font-size: 1em;
     }
 
-    .service-grid {
+    .service-grid,
+    .testimonial-grid {
         grid-template-columns: 1fr;
     }
 
@@ -267,15 +425,36 @@ footer {
 
     .contact-form, .contact-details {
         max-width: 100%;
+        min-width: unset; /* Remove min-width for small screens */
+        padding: 20px;
+    }
+
+    section {
+        padding: 60px 0;
     }
 }
 
 @media (max-width: 480px) {
     .container {
-        width: 90%;
+        width: 95%;
     }
-
+    header h1 {
+        font-size: 1.4em;
+    }
     section h2 {
         font-size: 1.8em;
+    }
+    .hero h2 {
+        font-size: 2em;
+    }
+    .hero p {
+        font-size: 0.9em;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+    .testimonial-item blockquote {
+        font-size: 1em;
     }
 }
